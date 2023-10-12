@@ -32,7 +32,11 @@ COPY . /app
 
 RUN echo "node version: " && node --version
 
-RUN npm install  --loglevel verbose && npm run build --loglevel verbose
+RUN npm install && npm run build
+
+RUN echo '---------------------------------'
+
+RUN cd / && ls -la
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
