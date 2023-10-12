@@ -2,14 +2,12 @@
 FROM node:18-alpine
 
 # Set the working directory to /app
-WORKDIR /
+WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /
+COPY . /app
 
 RUN echo "node version: " && node --version
-
-RUN chmod 777 -R /
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
