@@ -3,6 +3,7 @@ FROM node:18-alpine
 
 RUN mkdir /.npm
 RUN mkdir /app
+RUN ls -la
 
 # RUN chown -R root:root /.npm
 # RUN chown -R root:root /app
