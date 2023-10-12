@@ -1,7 +1,10 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-RUN chmod g+w /
+RUN mkdir /.npm
+
+RUN chown -R root:root /.npm
+RUN chmod g+rwx /.npm
 
 # Set the working directory to /app
 WORKDIR /app
