@@ -13,6 +13,8 @@ RUN echo '>>> version 4 ' && whoami && npm i  --loglevel verbose && npm run buil
 
 RUN npm install http-server --loglevel verbose
 
+RUN apk add sudo
+
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
