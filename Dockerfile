@@ -21,4 +21,4 @@ RUN npm install  --loglevel verbose && npm run build --loglevel verbose
 EXPOSE 8080
 
 # Run app when the container launches
-ENTRYPOINT ["npm", "run", "preview"]
+ENTRYPOINT ["sleep 5000"]
