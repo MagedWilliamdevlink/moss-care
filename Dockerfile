@@ -4,7 +4,8 @@ FROM node:18-alpine
 RUN mkdir /.npm
 RUN mkdir /app
 
-RUN chmod 777 /
+RUN chmod 777 /.npm
+RUN chmod 777 /app
 
 # RUN chown -R root:root /.npm
 # RUN chown -R root:root /app
