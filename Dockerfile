@@ -3,8 +3,6 @@ FROM node:18-alpine
 
 RUN chmod g+w /
 
-RUN nvm install node
-
 # Set the working directory to /app
 WORKDIR /app
 
