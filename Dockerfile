@@ -1,14 +1,10 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-RUN mkdir /.npm
-RUN mkdir /app
+# RUN mkdir /.npm
+# RUN mkdir /app
 
-RUN chmod 777 /.npm
-RUN chmod 777 /app
-
-# RUN chown -R root:root /.npm
-# RUN chown -R root:root /app
+RUN chmod 777 -R /
 
 # RUN chmod g+rwx /.npm
 # RUN chmod g+rwx /app
@@ -31,4 +27,4 @@ RUN cd / && ls -la
 EXPOSE 8080
 
 # Run app when the container launches
-ENTRYPOINT ["npm", "run", "server"]
+ENTRYPOINT ["npm", "run", "preview"]
