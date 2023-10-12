@@ -1,13 +1,7 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-RUN apk add --no-cache bash
-
-RUN wget -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-
-RUN nvm install node
-
-RUN nvm list
+RUN chmod g+w /
 
 # Set the working directory to /app
 WORKDIR /app
