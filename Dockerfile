@@ -3,7 +3,8 @@ FROM node:18-alpine
 
 # RUN mkdir /.npm
 
-RUN chown -R root:root /
+RUN chown -R root:root /.npm
+RUN chown -R root:root /app
 
 # RUN chmod g+rwx /.npm
 
