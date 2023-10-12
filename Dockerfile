@@ -4,10 +4,11 @@ FROM node:18-alpine
 RUN mkdir /.npm
 RUN mkdir /app
 
-RUN chown -R root:root /.npm
-RUN chown -R root:root /app
+# RUN chown -R root:root /.npm
+# RUN chown -R root:root /app
 
-# RUN chmod g+rwx /.npm
+RUN chmod g+rwx /.npm
+RUN chmod g+rwx /app
 
 # Set the working directory to /app
 WORKDIR /app
