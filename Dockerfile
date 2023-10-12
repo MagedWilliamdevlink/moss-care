@@ -21,5 +21,4 @@ RUN npm install  --loglevel verbose && npm run build --loglevel verbose
 EXPOSE 8080
 
 # Run app when the container launches
-ENTRYPOINT ["vite","preview"]
-CMD [ "port 8080 host" ]
+ENTRYPOINT ["npm", "run", "server"]
