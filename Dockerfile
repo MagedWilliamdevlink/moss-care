@@ -3,7 +3,7 @@ FROM node:18-alpine
 
 # RUN mkdir /.npm
 
-# RUN chown -R root:root /.npm
+# RUN chown -R root:root /
 
 # RUN chmod g+rwx /.npm
 
@@ -21,4 +21,4 @@ RUN npm install  --loglevel verbose && npm run build --loglevel verbose
 EXPOSE 8080
 
 # Run app when the container launches
-ENTRYPOINT ["node --version && sleep 5000"]
+ENTRYPOINT ["vite preview --port 8080 --host"]
