@@ -7,12 +7,14 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-RUN echo '>>> version 3 ' && whoami && npm i  --loglevel verbose && npm run build --loglevel verbose
-
 RUN echo "node version: " && node --version
+
+RUN echo '>>> version 4 ' && whoami && npm i  --loglevel verbose && npm run build --loglevel verbose
+
+RUN npm install http-server --loglevel verbose
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
 # Run app when the container launches
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "server"]
