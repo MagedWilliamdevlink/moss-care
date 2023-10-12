@@ -25,4 +25,4 @@ RUN apk add sudo
 EXPOSE 8080
 
 # Run app when the container launches
-CMD ["npm", "run", "server"]
+CMD ["npm", "run", "preview"]
