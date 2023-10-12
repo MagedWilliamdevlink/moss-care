@@ -22,4 +22,4 @@ EXPOSE 8080
 
 # Run app when the container launches
 ENTRYPOINT ["vite","preview"]
-CMD [ "port 8080" ]
+CMD [ "port 8080 host" ]
