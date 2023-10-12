@@ -1,7 +1,8 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-# RUN mkdir /.npm
+RUN mkdir /.npm
+RUN mkdir /app
 
 RUN chown -R root:root /.npm
 RUN chown -R root:root /app
